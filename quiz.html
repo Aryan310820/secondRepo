@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz</title>
+<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+<div id="subject-select">
+  <h2>Select Subject</h2>
+  <button onclick="startQuiz('math')">Math</button>
+  <button onclick="startQuiz('science')">Science</button>
+  <button onclick="startQuiz('history')">History</button>
+  <button onclick="startQuiz('computer')">Computer Science</button>
+</div>
+
+<div id="quiz-container" style="display:none;">
+  <div class="quiz-header">
+    <span id="timer">Time: 02:00</span>
+    <div class="progress-bar">
+      <div id="progress"></div>
+    </div>
+  </div>
+  <div id="quiz">
+    <h2 id="question">Question text</h2>
+    <ul id="options" class="options"></ul>
+    <button id="submit-btn">Submit</button>
+  </div>
+</div>
+
+<div id="result" style="display:none;">
+  <h2>Your Score: <span id="score"></span></h2>
+  <div id="answers"></div>
+  <button onclick="restartQuiz()">Restart</button>
+</div>
+
+<script src="quiz.js"></script>
+</body>
+</html>
